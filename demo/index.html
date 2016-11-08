@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
-  <head>
-    <title>device-query demo</title>
+<head>
+    <title>onx1-device demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
@@ -9,22 +9,22 @@
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
-    <link rel="import" href="../device-query.html">
+    <link rel="import" href="../onx1-device.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
     </style>
-  </head>
-  <body>
+</head>
+<body>
 
-    <div class="vertical-section-container centered">
-      <h3>Basic device-query Demo</h3>
-      <demo-snippet>
+<div class="vertical-section-container centered">
+    <h3>Basic onx1-device Demo</h3>
+    <demo-snippet>
         <template is="dom-bind">
-          <div>{{isMobile}}</div>
-          <device-query is-mobile="{{isMobile}}"></device-query>
+            <div>Type: {{type}}</div>
+            <onx1-device type="{{type}}"></onx1-device>
         </template>
-      </demo-snippet>
-    </div>
+    </demo-snippet>
+</div>
 
-  </body>
+</body>
 </html>

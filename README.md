@@ -1,4 +1,4 @@
-# \<device-query\>
+# \<onx1-device\>
 
 
 

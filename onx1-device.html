@@ -2,7 +2,7 @@
 <link rel="import" href="device.js-import.html">
 
 <!--
-`device-query`
+`onx1-device`
 
 
 @demo demo/index.html 
@@ -10,18 +10,20 @@
 
 <script>
     Polymer({
-        is: 'device-query',
+        is: 'onx1-device',
         properties: {
-            isMobile: {
-                type: Boolean,
-                value: false,
+            type: {
+                type: String,
+                value: 'mobile',
                 readOnly: true,
                 notify: true
-            },
+            }
         },
         ready: function () {
             var devicejs = device.noConflict();
-            this._setIsMobile(!devicejs.desktop());
+            if (devicejs.mobile()) return; // Default
+            var type = devicejs.tablet() ? 'tablet' : 'desktop';
+            this._setType(type);
         }
     });
 </script>
